@@ -20,8 +20,8 @@
       <div class="row gy-3">
         <!-- Left elements -->
         <div class="col-lg-2 col-sm-4 col-4">
-          <a href="https://mdbootstrap.com/" target="_blank" class="float-start">
-            <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="35" />
+          <a href="#" class="float-start">
+            <img src="https://www.logolynx.com/images/logolynx/2c/2cd2908f2731f8087e3958b8403bd6f5.png" height="35" />
           </a>
         </div>
         <!-- Left elements -->
@@ -39,13 +39,13 @@
         <!-- Right elements -->
         <div class="col-lg-5 col-md-12 col-12">
           <div class="input-group float-center">
-            <!-- <div class="form-outline">
-              <input type="search" id="form1" class="form-control" />
-              <label class="form-label" for="form1">Search</label>
-            </div> -->
-            <!-- <button type="button" class="btn btn-primary shadow-0">
+            <div class="form-outline">
+              <input type="search" id="form1" class="form-control" placeholder="Search"/>
+              <!-- <label class="form-label" for="form1">Search</label> -->
+            </div> 
+            <button type="button" class="btn btn-primary shadow-0">
               <i class="fas fa-search"></i>
-            </button> -->
+            </button>
           </div>
         </div>
         <!-- Right elements -->
@@ -79,7 +79,7 @@
             <a class="nav-link text-dark" aria-current="page" href="{{url('/')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark" href="#">Categories</a>
+            <a class="nav-link text-dark" href="{{url('/frontend')}}">Categories</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-dark" href="{{url('/list')}}">Products</a>

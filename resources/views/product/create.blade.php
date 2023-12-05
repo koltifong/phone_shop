@@ -30,10 +30,9 @@
                 <!-- It Create the new Category -->
 
                 {!! Form::open(array('url'=>'product', 'files'=>'true')) !!}
-		  {!! Form::label('category_id', 'Category:') !!}
+		        {!! Form::label('category_id', 'Category:') !!}
                 {!! Form::select('category_id',$categories,null ,array('class'=>'form-select')) !!}
                 
-               
                 <br>
                 {!! Form::label('name', 'Name:') !!}
                 {!! Form::text('name',null, array('class'=>'form-control')) !!}
