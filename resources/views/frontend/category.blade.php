@@ -1,7 +1,9 @@
 @extends('layout.frontend')
 @section('content')
-<div class="container">
-    
+<div class="container my-5">
+<header class="mb-4">
+      <h3>Categories</h3>
+    </header>
     <div class="row">
         <br>
         @if (count(array($categories)) > 0)
@@ -14,13 +16,6 @@
                     @endforeach
                 </ul>
             </div>
-            <!-- <label for="categories">Choose a category:</label>
-
-            <select id="categories">
-            @foreach ($categories as $category)
-            <option><a href="{{url('/frontend/'.$category->id)}}">{{$category->name}}</a></option>
-            </select> 
-            @endforeach -->
         @endif
         <br><br><br>
         @foreach($products as $product)

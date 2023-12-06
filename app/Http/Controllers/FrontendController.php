@@ -13,7 +13,9 @@ class FrontendController extends Controller
      */
     public function index()
     {
-        return view("frontend.index");
+        $categories = Category::all();
+        $products = Product::orderBy('created_at','DESC')->paginate(3);
+        return view("frontend.index")->with('products', $products)->with('categories', $categories);
     }
     public function list()
     {

@@ -13,7 +13,7 @@
         @endif
     <div class="row">
         @foreach($products as $product)
-        <div class="col-lg-3 col-sm-6 col-md-6 d-flex">
+        <div class="col-xs-18 col-sm-6 col-md-3">
             <div class="thumbnail">
             <a href="{{url('/show/'.$product->id)}}">
             <img src="img/{{$product->image}}" width="200px" height="200px" alt=""></a>
@@ -32,6 +32,5 @@
         @endforeach
     </div>
     <!-- Pagination -->
-    {{ $products->links('pagination::bootstrap-5');}}
-</div>
+    {{ $products->withQueryString()->links('pagination::bootstrap-5');}}
 @endsection

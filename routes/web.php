@@ -34,17 +34,11 @@ use App\Http\Controllers\Controller;
 
 // route for category
 Route::get('/category', [CategoryController::class, 'index'])->name("category.list");
-
 Route::get('/category/create', [CategoryController::class, 'create'])->name("category.create");
-
 Route::post('/category', [CategoryController::class, 'store'])->name("category.store");
-
 Route::get("/category/{categoryId}/edit", [CategoryController::class, 'edit'])->name('category.edit');
-
 Route::put("/category/{categoryId}", [CategoryController::class, 'update'])->name('category.update');
-
 Route::delete("/category/{categoryId}", [CategoryController::class, 'destroy'])->name('category.delete');
-    
 Route::get('/category/{cateId}', [CategoryController::class, 'show'])->name("category.show");
 
 //route for product
@@ -76,8 +70,8 @@ Route::get('/dashboard', [AuthController::class, 'dashboard']);
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 //contact form
-Route::get('/post-contact', [ContactController::class, 'index'])->name('contact');
-Route::post('/post-contact', [ContactController::class, 'postContact'])->name('contact.post');
+Route::get('/contact', [ContactController::class, 'createForm']);
+Route::post('/contact', [ContactController::class, 'ContactUsForm'])->name('contact.store');
 
 // change password
 Route::get('/change-password', [ChangePasswordController::class, 'index'])->name('form.password');
