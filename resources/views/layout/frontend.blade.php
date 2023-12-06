@@ -20,7 +20,7 @@
       <div class="row gy-3">
         <!-- Left elements -->
         <div class="col-lg-2 col-sm-4 col-4">
-          <a href="#" class="float-start">
+          <a href="{{url('/')}}" class="float-start">
             <img src="https://www.logolynx.com/images/logolynx/2c/2cd2908f2731f8087e3958b8403bd6f5.png" height="35" />
           </a>
         </div>
@@ -83,18 +83,6 @@
           </li>
           <li class="nav-item">
             <a class="nav-link text-dark" href="{{url('/list')}}">Products</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="#">Gift boxes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="#">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="#">Menu item</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="#">Menu name</a>
           </li>
           <!-- Navbar dropdown -->
           <li class="nav-item dropdown">
@@ -350,84 +338,6 @@
   </div>
   <!-- container end.// -->
 </section>
-<!-- Feature -->
-
-<!-- Blog -->
-<section class="mt-5 mb-4">
-  <div class="container text-dark">
-    <header class="mb-4">
-      <h3>Blog posts</h3>
-    </header>
-
-    <div class="row">
-      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-        <article>
-          <a href="#" class="img-fluid">
-            <img class="rounded w-100" src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/posts/1.webp" style="object-fit: cover;" height="160" />
-          </a>
-          <div class="mt-2 text-muted small d-block mb-1">
-            <span>
-              <i class="fa fa-calendar-alt fa-sm"></i>
-              23.12.2022
-            </span>
-            <a href="#"><h6 class="text-dark">How to promote brands</h6></a>
-            <p>When you enter into any new area of science, you almost reach</p>
-          </div>
-        </article>
-      </div>
-      <!-- col.// -->
-      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-        <article>
-          <a href="#" class="img-fluid">
-            <img class="rounded w-100" src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/posts/2.webp" style="object-fit: cover;" height="160" />
-          </a>
-          <div class="mt-2 text-muted small d-block mb-1">
-            <span>
-              <i class="fa fa-calendar-alt fa-sm"></i>
-              13.12.2022
-            </span>
-            <a href="#"><h6 class="text-dark">How we handle shipping</h6></a>
-            <p>When you enter into any new area of science, you almost reach</p>
-          </div>
-        </article>
-      </div>
-      <!-- col.// -->
-      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-        <article>
-          <a href="#" class="img-fluid">
-            <img class="rounded w-100" src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/posts/3.webp" style="object-fit: cover;" height="160" />
-          </a>
-          <div class="mt-2 text-muted small d-block mb-1">
-            <span>
-              <i class="fa fa-calendar-alt fa-sm"></i>
-              25.11.2022
-            </span>
-            <a href="#"><h6 class="text-dark">How to promote brands</h6></a>
-            <p>When you enter into any new area of science, you almost reach</p>
-          </div>
-        </article>
-      </div>
-      <!-- col.// -->
-      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-        <article>
-          <a href="#" class="img-fluid">
-            <img class="rounded w-100" src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/posts/4.webp" style="object-fit: cover;" height="160" />
-          </a>
-          <div class="mt-2 text-muted small d-block mb-1">
-            <span>
-              <i class="fa fa-calendar-alt fa-sm"></i>
-              03.09.2022
-            </span>
-            <a href="#"><h6 class="text-dark">Success story of sellers</h6></a>
-            <p>When you enter into any new area of science, you almost reach</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Blog -->
-
 <!-- Footer -->
 <footer class="text-center text-lg-start text-muted mt-3" style="background-color: #f5f5f5;">
   <!-- Section: Links  -->
@@ -439,7 +349,7 @@
         <div class="col-12 col-lg-3 col-sm-12 mb-2">
           <!-- Content -->
           <a href="https://mdbootstrap.com/" target="_blank" class="">
-            <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="35" />
+            <img src="https://www.logolynx.com/images/logolynx/2c/2cd2908f2731f8087e3958b8403bd6f5.png" height="35" />
           </a>
           <p class="mt-2 text-dark">
             © 2023 Copyright: MDBootstrap.com
@@ -469,7 +379,7 @@
             Information
           </h6>
           <ul class="list-unstyled mb-4">
-            <li><a class="text-muted" href="#">Help center</a></li>
+            <li><a class="text-muted" href="{{url('/contact')}}">Help center</a></li>
             <li><a class="text-muted" href="#">Money refund</a></li>
             <li><a class="text-muted" href="#">Shipping info</a></li>
             <li><a class="text-muted" href="#">Refunds</a></li>

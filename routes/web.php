@@ -10,6 +10,8 @@ use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\UpdateProfileController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\StoreController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -63,6 +65,7 @@ Route::get('/list',[FrontendController::class,'list']);
 Route::get('/show/{id}',[FrontendController::class,'show']);
 Route::get('/frontend/{category?}', [FrontendController::class,'getByCategory']);
 Route::get('/search', [FrontendController::class,'getBySearch']);
+Route::get('/contact',[FrontendController::class,'contact']);
 
 // login and register for frontend
 Route::get('/login', [AuthController::class, 'index'])->name('login');
@@ -71,6 +74,10 @@ Route::get('/registration', [AuthController::class, 'registration'])->name('regi
 Route::post('/post-registration', [AuthController::class, 'postRegistration'])->name('register.post');
 Route::get('/dashboard', [AuthController::class, 'dashboard']);
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+//contact form
+Route::get('/post-contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/post-contact', [ContactController::class, 'postContact'])->name('contact.post');
 
 // change password
 Route::get('/change-password', [ChangePasswordController::class, 'index'])->name('form.password');
