@@ -12,7 +12,86 @@
     <title>Add to cart</title>
 </head>
 <body>
-<div class="container">
+<header>
+  <!-- Jumbotron -->
+  <div class="p-3 text-center bg-white border-bottom">
+    <div class="container">
+      <div class="row gy-3">
+        <!-- Left elements -->
+        <div class="col-lg-2 col-sm-4 col-4">
+          <a href="{{url('/')}}" class="float-start">
+            <img src="https://www.logolynx.com/images/logolynx/2c/2cd2908f2731f8087e3958b8403bd6f5.png" height="35" />
+          </a>
+        </div>
+        <!-- Left elements -->
+
+        <!-- Center elements -->
+        <div class="order-lg-last col-lg-5 col-sm-8 col-8">
+          <div class="d-flex float-end">
+            <a href="{{url('/login')}}" class="me-1 border rounded py-1 px-3 nav-link d-flex align-items-center"> <i class="fas fa-user-alt m-1 me-md-2"></i><p class="d-none d-md-block mb-0">Sign in</p> </a>
+            <a href="{{ url('/cart') }}" class="border rounded py-1 px-3 nav-link d-flex align-items-center"> <i class="fas fa-shopping-cart m-1 me-md-2"></i><p class="d-none d-md-block mb-0">My cart</p> </a>
+          </div>
+        </div>
+        <!-- Center elements -->
+
+        <!-- Right elements -->
+        <div class="col-lg-5 col-md-12 col-12">
+        {{ Form::open(array('url'=>'/search','method'=>'get')) }}
+        <div class="input-group float-center">
+            {{ Form::text('keyword',$keyword ?? '', array('placeholder'=>'Search', 'class'=>'form-control')) }}
+            <span class="input-group-btn">
+                {{ Form::submit('search',array('class'=>'btn btn-primary')) }}
+            </span>
+        </div>
+        {{ Form::close() }}
+    </div>
+        <!-- Right elements -->
+      </div>
+    </div>
+  </div>
+  <!-- Jumbotron -->
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <!-- Container wrapper -->
+    <div class="container justify-content-center justify-content-md-between">
+      <!-- Toggle button -->
+      <button
+              class="navbar-toggler border py-2 text-dark"
+              type="button"
+              data-mdb-toggle="collapse"
+              data-mdb-target="#navbarLeftAlignExample"
+              aria-controls="navbarLeftAlignExample"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              >
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarLeftAlignExample">
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-dark" aria-current="page" href="{{url('/')}}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="{{url('/frontend')}}">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="{{url('/list')}}">Products</a>
+          </li>
+          <!-- Contact form -->
+          <li><a class="nav-link text-dark" href="{{url('/contact')}}">Contact form</a></li>
+        </ul>
+        <!-- Left links -->
+      </div>
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+</header>
+<div class="container my-5">
     <div class="row">
         <div class="md-12">
             @if(session('success'))
@@ -66,7 +145,7 @@
                     <tr>
                         <td colspan="5" class="text-right">
                         <a href="{{ url('/') }}" class="btn btn-outline-primary"><i class="fa fa-angle-left"></i> Continue Shopping</a>
-                        <a href="#" class="btn btn-success">Checkout</a>
+                        <a href="#" class="btn btn-danger">Checkout</a>
                         </td>
                     </tr>
                 </tfoot>
